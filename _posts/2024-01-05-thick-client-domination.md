@@ -11,7 +11,7 @@ tags: [re]
 In this article I'll demonstrate how to show off your own thickness to the application by tearing apart the [Damn Vulnerable Thick Client App](https://github.com/srini0x00/dvta).
 
 ## **Table of Contents**
-- [Architecture](#Architecture)
+- [Architecture](#architecture)
 - [Low hanging](#low-hanging)
    - [Application signing](#application-signing)
    - [Binary protection](#binary-protection)
