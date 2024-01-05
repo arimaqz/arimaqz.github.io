@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Opiuchi Box Write-up(HTB)
+title: Opiuchi Box Write-up
 author: arimaqz
 categories: [Writeup, HTB]
 tags: [snakeyaml-deserilization]
