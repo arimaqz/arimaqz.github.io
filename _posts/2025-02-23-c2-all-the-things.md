@@ -122,7 +122,7 @@ On the client-side, it keeps monitoring the address where the command is stored.
 
 ### Execution
 Let's see it in action now:
-![clip](/assets/img/posts/2024-02-23-c2-all-the-things/clip-1.png)
+![clip](/assets/img/posts/2025-02-23-c2-all-the-things/clip-1.png)
 As you can see I tried to give it some commands and it executed them and sent me the results. In a real world scenario, `client.py` would be in victim's system and `server.py` in attacker's.
 
 ## Github
@@ -132,7 +132,7 @@ In the case of [github](https://github.com), one of the scenarios that can be im
 
 ### Prerequisites
 For this scenario to work we have to create a Personal Access Token(PAT) in github. Moreover the PAT should have permissions over gist:
-![git](/assets/img/posts/2024-02-23-c2-all-the-things/git-2.png)
+![git](/assets/img/posts/2025-02-23-c2-all-the-things/git-2.png)
 
 ### Agent
 ```python
@@ -160,7 +160,7 @@ while True:
 The code on the client-side authenticates using the generated Personal Access Token (PAT) with gist permissions. It then continuously checks the first command in the gist. If the command is not `nothing`, it executes it and creates a new comment to store the command's output and sets the first comment to `nothing`. This is to check whether there is a new command.
 
 ### Execution
-![git](/assets/img/posts/2024-02-23-c2-all-the-things/git-1.png)
+![git](/assets/img/posts/2025-02-23-c2-all-the-things/git-1.png)
 There it is. I set the command in the first comment and the script executes it and then sets the first comment to `nothing`.
 
 ## Discord
@@ -170,10 +170,10 @@ In this particular scenario involving Discord, it is needed to develop a bot and
 
 ### Prerequisites
 To exploit the bot functionality within Discord, the initial step is to create an application through the Discord Developer Portal and afterwards generate a bot within that application. Additionally, the bot must be granted specific privileges to ensure its proper functionality:
-![privileges](/assets/img/posts/2024-02-23-c2-all-the-things/discord-1.png)
+![privileges](/assets/img/posts/2025-02-23-c2-all-the-things/discord-1.png)
 
 Following that we need to generate a OAuth2 URL to add our bot to the desired server where intend to issue our commands:
-![privileges](/assets/img/posts/2024-02-23-c2-all-the-things/discord-2.png)
+![privileges](/assets/img/posts/2025-02-23-c2-all-the-things/discord-2.png)
 
 ### Agent
 ```python
@@ -205,7 +205,7 @@ if __name__ == "__main__":
 It has an event handler for all incoming messages and upon receiving one, it executes the command and sends back the result to the server.
 
 ### Execution
-![discord](/assets/img/posts/2024-02-23-c2-all-the-things/discord-3.png)
+![discord](/assets/img/posts/2025-02-23-c2-all-the-things/discord-3.png)
 I send the command in the server, the bot receives it, executes the command, and sends the result back to the server.
 
 ## Telegram
@@ -215,7 +215,7 @@ This scenario is not unlike to the one used for Discord. In this scenario we als
 
 ### Prerequisites
 To create a bot in Telegram, We need use @botfather:
-![botfather](/assets/img/posts/2024-02-23-c2-all-the-things/telegram-1.png)
+![botfather](/assets/img/posts/2025-02-23-c2-all-the-things/telegram-1.png)
 
 ### Agent
 ```python
@@ -240,7 +240,7 @@ bot.infinity_polling()
 This code checks for any message in the bot private message and executes the command.
 
 ### Execution
-![telegram](/assets/img/posts/2024-02-23-c2-all-the-things/telegram-2.png)
+![telegram](/assets/img/posts/2025-02-23-c2-all-the-things/telegram-2.png)
 Upon receiving a command, the bot executes it and sends back the result.
 
 
@@ -252,15 +252,15 @@ In this platform, we must create a bot and then add an event handler to receive 
 ### Prerequisites
 First we need to create an app in Slack:
 
-![slack](/assets/img/posts/2024-02-23-c2-all-the-things/slack-2.png)
+![slack](/assets/img/posts/2025-02-23-c2-all-the-things/slack-2.png)
 Then add token scope:
 
-![slack](/assets/img/posts/2024-02-23-c2-all-the-things/slack-3.png)
+![slack](/assets/img/posts/2025-02-23-c2-all-the-things/slack-3.png)
 These permissions are needed to write messages and receive events.
 
 After that, add the bot to the channel:
 
-![slack](/assets/img/posts/2024-02-23-c2-all-the-things/slack-4.png)
+![slack](/assets/img/posts/2025-02-23-c2-all-the-things/slack-4.png)
 
 ### Agent
 ```python
@@ -288,9 +288,9 @@ if __name__ == "__main__":
 ```
 Slack bot token adn signing secret must be put in the code in order for it to work.
 An event handler is registered and the URL where the code is hosted must be added to event subscription:
-![slack](/assets/img/posts/2024-02-23-c2-all-the-things/slack-5.png)
+![slack](/assets/img/posts/2025-02-23-c2-all-the-things/slack-5.png)
 Then whenever a message is received an event is triggered and the script executes the command and sends back the result to the channel:
-![slack](/assets/img/posts/2024-02-23-c2-all-the-things/slack-1.png)
+![slack](/assets/img/posts/2025-02-23-c2-all-the-things/slack-1.png)
 
 ## Trello
 > "Trello is a web-based, kanban-style, list-making application developed by Atlassian." - Wikipedia
@@ -350,10 +350,10 @@ while True:
 ```
 Here we make use of the card ID we got earlier. Then we use the corresponding API to get the name of the card and if it's not set to `nothing`:
 
-![trello](/assets/img/posts/2024-02-23-c2-all-the-things/trello-2.png)
+![trello](/assets/img/posts/2025-02-23-c2-all-the-things/trello-2.png)
 
 The script executes the command and adds a comment as the result of the command.
-![trello](/assets/img/posts/2024-02-23-c2-all-the-things/trello-1.png)
+![trello](/assets/img/posts/2025-02-23-c2-all-the-things/trello-1.png)
 
 ## Server Message Block (SMB)
 > "Server Message Block (SMB) is a communication protocol[1] used to share files, printers, serial ports, and miscellaneous communications between nodes on a network." - Wikipedia
@@ -390,9 +390,9 @@ while True:
 This script authenticates using a username and password and then tries to access and read `cmd.txt` in `share2` shared folder. It executes the command if there is any and if not it constantly checks it. After receiving and executing the command, it stores the output in `output.txt` in the same `share2` shared folder.
 
 ### Execution
-![smb](/assets/img/posts/2024-02-23-c2-all-the-things/smb-1.png)
+![smb](/assets/img/posts/2025-02-23-c2-all-the-things/smb-1.png)
 Below is the traffic in Wireshark:
-![smb](/assets/img/posts/2024-02-23-c2-all-the-things/smb-2.png)
+![smb](/assets/img/posts/2025-02-23-c2-all-the-things/smb-2.png)
 As you can see all the traffic is going through SMB protocol.
 
 ## Remote Procedure Call (RPC)
@@ -455,10 +455,10 @@ if __name__ == "__main__":
 Here the agent calls `command` procedure and then upon receiving the command, executes it and sends back the respone by calling `response` procedure.
 
 #### Execution
-![xmlrpc](/assets/img/posts/2024-02-23-c2-all-the-things/xmlrpc-1.png)
+![xmlrpc](/assets/img/posts/2025-02-23-c2-all-the-things/xmlrpc-1.png)
 So here we provide the command and the agent executes it and gives us back the result.
 
-![xmlrpc](/assets/img/posts/2024-02-23-c2-all-the-things/xmlrpc-2.png)
+![xmlrpc](/assets/img/posts/2025-02-23-c2-all-the-things/xmlrpc-2.png)
 Now as you can see, all communication is based on HTTP protocol.
 
 ## Visual Studio Code
@@ -470,11 +470,11 @@ Note that it is quite different from other scenarios where there was a program d
 
 ### Execution
 First and foremost, we have to start the tunnel:
-![code](/assets/img/posts/2024-02-23-c2-all-the-things/code-1.png)
+![code](/assets/img/posts/2025-02-23-c2-all-the-things/code-1.png)
 
 Afterwards we have to authorize through github:
 
-![code](/assets/img/posts/2024-02-23-c2-all-the-things/code-2.png)
+![code](/assets/img/posts/2025-02-23-c2-all-the-things/code-2.png)
 
 Thereafter we have a working tunnel where we can execute code remotely in the browser as well as execute commands through the built-in terminal:
-![code](/assets/img/posts/2024-02-23-c2-all-the-things/code-3.png)
+![code](/assets/img/posts/2025-02-23-c2-all-the-things/code-3.png)
