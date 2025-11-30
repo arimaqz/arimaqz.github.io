@@ -394,7 +394,7 @@ The credential manager can be accessed without any protection if you are a local
 
 ## References
 
-[nooranet.com](nooranet.com) Windows Forensics course by [Mahyar Safaei](https://linkedin.com/in/mahyar-safaei). Special thanks to them for their valuable course on Windows Forensics.
+[nooranet.com](https://nooranet.com) Windows Forensics course by [Mahyar Safaei](https://linkedin.com/in/mahyar-safaei). Special thanks to them for their valuable course on Windows Forensics.
 
 [https://psmths.gitbook.io/windows-forensics/](https://psmths.gitbook.io/windows-forensics/)
 
