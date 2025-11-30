@@ -184,7 +184,7 @@ It is useful for us attackers in the way that it includes the creator's name whi
 The tool that can be used for this is `exiftool`.
 
 #### example
-I've downloaded a sample `docx` file from [ASecuritySuite]("https://asecuritysite.com/forensics/docx?file=hello.docx) to analyze it using `exiftool`.
+I've downloaded a sample `docx` file from [ASecuritySite](https://asecuritysite.com/forensics/docx?file=hello.docx) to analyze it using `exiftool`.
 
 ![exiftool](/assets/img/posts/2025-11-30-offensive-windows-forensics/exiftool.png)
 
