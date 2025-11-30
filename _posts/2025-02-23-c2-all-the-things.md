@@ -4,7 +4,7 @@ title: C2AllTheThings
 author: arimaqz
 categories: [Malware-Development]
 ---
-# C2AllTheThings
+# Introduction
 "C2 All the Things" project is where I researched and listed things an attacker could use as a communication protocol. The idea behind the project is to show how things we use daily could be used in cybersecurity. Note that this list is by all means not complete and the PoCs are written in a fundamental way in Python to only show the impact and how it might be implemented. In real world all these codes must be re-implemented to evade AV/EDRs and to be feature-rich.
 
 Name is inspired by [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings).
@@ -12,7 +12,7 @@ Name is inspired by [PayloadsAllTheThings](https://github.com/swisskyrepo/Payloa
 **Note that while these scenarios are used on certain platforms, It is possible to implement them in a similar way on all other related platforms.**
 
 ## Table of Contents
-- [C2AllTheThings](#c2allthethings)
+- [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [cl1p.net](#cl1pnet)
     - [Server](#server)
